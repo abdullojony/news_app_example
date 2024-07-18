@@ -10,7 +10,9 @@ class TopHeadlines extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final articles = ref.watch(newsProvider);
     return articles.when(
-        data: (articles) => NewsList(articles: articles),
+        data: (articles) => RefreshIndicator(
+            onRefresh: () => ref.refresh(newsProvider.future),
+            child: NewsList(articles: articles)),
         error: (e, s) => Center(child: Text(e.toString())),
         loading: () => const Center(child: CircularProgressIndicator()));
   }

@@ -3,7 +3,7 @@ import 'package:news_app_example/features/top_headlines/domain/reporitories/news
 
 class GetTopHeadlines {
   final NewsRepositories _repositories;
-  GetTopHeadlines(this._repositories);
+  GetTopHeadlines(this._repositories); // allows injection
 
   Future<List<ArticleEntity>> call() {
     return _repositories.getTopHeadlines();

@@ -1,24 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'news_provider.dart';
+part of 'tab_provider.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$newsHash() => r'ac11f3e2c30d84fed61da74aa670c2e9be699507';
+String _$tabNotifierHash() => r'1c7216b85080bd2aed357461364217e83ce40bcf';
 
-/// See also [news].
-@ProviderFor(news)
-final newsProvider = AutoDisposeFutureProvider<List<ArticleEntity>>.internal(
-  news,
-  name: r'newsProvider',
+/// See also [TabNotifier].
+@ProviderFor(TabNotifier)
+final tabNotifierProvider =
+    AutoDisposeNotifierProvider<TabNotifier, int>.internal(
+  TabNotifier.new,
+  name: r'tabNotifierProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$newsHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$tabNotifierHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef NewsRef = AutoDisposeFutureProviderRef<List<ArticleEntity>>;
+typedef _$TabNotifier = AutoDisposeNotifier<int>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
